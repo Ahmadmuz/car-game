@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Turbo Dodge — Car Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="wrap">
+    <h1>🏎️ Turbo Dodge</h1>
+
+    <div id="hud">
+      <span>Score: <b id="score">0</b></span>
+      <span>Speed: <b id="speed">0</b> km/h</span>
+      <span>Best: <b id="best">0</b></span>
+    </div>
+
+    <div id="stage">
+      <canvas id="game" width="420" height="640"></canvas>
+
+      <div id="startScreen" class="overlay">
+        <div class="panel">
+          <h2>Turbo Dodge</h2>
+          <p>Dodge the traffic. Don't crash!</p>
+          <p class="keys">
+            <kbd>←</kbd><kbd>→</kbd> or <kbd>A</kbd><kbd>D</kbd> to steer<br>
+            <kbd>↑</kbd><kbd>↓</kbd> to speed up / slow down
+          </p>
+          <button id="startBtn">Start Game</button>
+        </div>
+      </div>
+
+      <div id="overScreen" class="overlay hidden">
+        <div class="panel">
+          <h2>💥 Crash!</h2>
+          <p>Score: <b id="finalScore">0</b></p>
+          <p id="newBest" class="newbest hidden">🏆 New best!</p>
+          <button id="retryBtn">Play Again</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="touch">
+      <button id="leftBtn"  aria-label="Steer left">◀</button>
+      <button id="upBtn"    aria-label="Speed up">▲</button>
+      <button id="downBtn"  aria-label="Slow down">▼</button>
+      <button id="rightBtn" aria-label="Steer right">▶</button>
+    </div>
+
+    <p class="hint">Tip: the faster you go, the more you score.</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
